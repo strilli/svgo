@@ -16,7 +16,7 @@ exports.description = 'convert ids to classes (disabled by default)';
  */
 exports.fn = function(item) {
 
-    if (item.hasAttr('id') && !item.isElem('clipPath')) {
+    if (item.hasAttr('id') && !item.isElem('clipPath') && !item.isElem('linearGradient')) {
         var id = item.attr('id');
 
         // add class attribute using id value
